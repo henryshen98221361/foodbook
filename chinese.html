@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>學而食習之</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<style id="popup-arrow-css">
+		.clickable-area {
+			display: block;
+			width: 100%;
+			height: 300px;
+			background-color: #ffefef;
+		}
+
+		.clickable-area:focus {
+			outline: 0;
+		}
+	</style>
+	<style id="tooltip-btn">
+		.ui-btn.my-tooltip-btn,
+		.ui-btn.my-tooltip-btn:hover,
+		.ui-btn.my-tooltip-btn:active {
+			background: none;
+			border: 0;
+		}
+
+		ul.foodul {
+			list-style-type: none;
+			font-size: 16px;
+			font-weight: 700;
+			margin: .5em 0;
+			font-family: sans-serif;
+			padding: 5px;
+			padding-left: 0px;
+		}
+
+		li.foodli {
+			float: left;
+			border: 2px #ccc solid;
+			padding: 5px;
+			border-radius: 10px;
+			background-color: #eee;
+			font-size: 16px;
+			font-weight: 700;
+			margin-top: .3em;
+			margin-bottom: .5em;
+			margin-right: .5em;
+			font-family: sans-serif;
+		}
+	</style>
+	<style>
+		.transition {
+			-webkit-transform: scale(1.02);
+			-moz-transform: scale(1.02);
+			-o-transform: scale(1.02);
+			transform: scale(1.02);
+		}
+
+
+
+		#pic002 {
+			-webkit-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+		}
+
+		#pic003 {
+			-webkit-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+		}
+	</style>
+	<style>
+		.block {
+			border: 1px solid gray;
+			top: 0px;
+			font-weight: bold;
+			padding: 6px;
+			text-align: center;
+		}
+
+		.b1 {
+			display: none;
+			background-color: gray;
+			text-align: center;
+		}
+
+		@media only screen and (min-width:1000px) {
+			.b1 {
+				display: block;
+			}
+		}
+
+		.chinese {
+			width: 206px;
+			height: 90px;
+			display: block;
+			position: absolute;
+			left: 10%;
+			border-radius: 10px;
+			background-image: url('images/chineseb.jpg');
+		}
+
+		.chinese:hover {
+			background-image: url('images/chinese.jpg');
+		}
+
+		.japanese {
+			width: 206px;
+			height: 90px;
+			display: block;
+			position: absolute;
+			left: 32%;
+			border-radius: 10px;
+			background-image: url('images/japaneseb.jpg');
+		}
+
+		.japanese:hover {
+			background-image: url('images/japanese.jpg');
+		}
+
+		.italian {
+			width: 206px;
+			height: 90px;
+			display: block;
+			position: absolute;
+			left: 55%;
+			border-radius: 10px;
+			background-image: url('images/italianb.jpg');
+		}
+
+		.italian:hover {
+			background-image: url('images/italian.jpg');
+		}
+
+		.cafe {
+			width: 206px;
+			height: 90px;
+			display: block;
+			position: absolute;
+			right: 10%;
+			border-radius: 10px;
+			background-image: url('images/cafeb.jpg');
+		}
+
+		.cafe:hover {
+			background-image: url('images/cafe.jpg');
+		}
+
+		.b2 {
+			display: none;
+		}
+
+		@media only screen and (min-width:1300px) {
+			.b2 {
+				display: block;
+			}
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+			$('#pic002').hover(function() {
+				$("#pic002").addClass('transition');
+
+			}, function() {
+				$("#pic002").removeClass('transition');
+			});
+		});
+		$(document).ready(function() {
+			$('#pic003').hover(function() {
+				$("#pic003").addClass('transition');
+
+			}, function() {
+				$("#pic003").removeClass('transition');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- Header -->
+	<header id="header" class="alt">
+		<div class="logo"><a href="homework.html"></a></div>
+		<a href="#menu">目錄</a>
+	</header>
+
+	<!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a href="./index.html">回首頁</a></li>
+			<li><a href="./chinese.html">中式料理</a></li>
+			<li><a href="./japanese.html">日式料理</a></li>
+			<li><a href="./italian.html">義式料理</a></li>
+			<li><a href="./cafe.html">甜點</a></li>
+		</ul>
+	</nav>
+	<!-- Banner -->
+	<section class="banner full">
+		<article>
+			<img src="images/slide01.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享。動手做</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="images/slide02.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享。動手做</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="images/slide03.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享。動手做</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="images/slide04.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享。動手做</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="images/slide05.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享。動手做</p>
+				</header>
+			</div>
+		</article>
+	</section>
+	<!-- body-content -->
+	<section id="three" class="wrapper style2">
+		<div class="inner">
+			<div class="b2" id="b2">
+				<div>
+					<a href="./chinese.html" data-ajax="false" class="chinese">
+					</a>
+				</div>
+				<div>
+					<a href="./japanese.html" data-ajax="false" class="japanese">
+					</a>
+				</div>
+				<div>
+					<a href="./italian.html" data-ajax="false" class="italian">
+					</a>
+				</div>
+				<div>
+					<a href="./cafe.html" data-ajax="false" class="cafe">
+					</a>
+				</div>
+			</div>
+			<p style="padding-top:120px;" align="right">當前頁面:中式料理&nbsp;&nbsp;<a href="./index.html" data-ajax="false">回首頁</a></p>
+			<div class="gallery">
+				<!-- menu-two -->
+				<div class="image fit">
+					<img id="pic002" src="images/pic02.jpg" />
+					<h2 align="center" style="margin-top:5px;margin-bottom:5px;">鮭魚炒飯</h2>
+					<div id="page">
+						<div>
+							<p align="center"><a href="#popupCloseRight2" data-position-to='window' data-transition="slidedown" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="mae;margin-top: 0px;margin-bottom: 0px;" aria-haspopup="true" aria-owns="popupCloseRight"
+								 aria-expanded="false">我要學!</a></p>
+						</div>
+					</div>
+					<div data-role="popup" id="popupCloseRight2" class="ui-content" style="width:650px;">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+						<img src="images/pic02.jpg" />
+						<ul class="foodul">
+							<li class="foodli" style="float:none;background-color: #87CEEB;font-size:24px;width:80px;">食材:</li>
+							<li class="foodli">1.白飯</li>
+							<li class="foodli">2.鮭魚50g</li>
+							<li class="foodli">3.洋蔥一顆</li>
+							<li class="foodli">4.香菜一小把</li>
+							<li class="foodli">5.蒜頭三顆</li>
+							<li class="foodli">6.雞蛋一顆</li>
+							<li class="foodli">7.油、鹽、醬油、黑胡椒少許</li>
+						</ul>
+						<ul class="foodul" style="clear: both;font-size:24px;">
+							<li class="foodli" style="float:none;background-color: #D8BFD8;width:80px;font-size:24px;">步驟:</li>
+							<li class="foodli" style="clear: both;">1.熱鍋，下油，將打散的蛋炒半熟後先放旁邊</li>
+							<li class="foodli" style="clear: both;">2.洋蔥加入鍋內，炒至透明</li>
+							<li class="foodli" style="clear: both;">3.續加入鮭魚炒熟</li>
+							<li class="foodli" style="clear: both;">4.鮭魚熟後，小火，加入白飯，香菜，蛋，鹽，醬油，黑胡椒。</li>
+							<li class="foodli" style="clear: both;">5.中火炒勻，盛盤，上桌。</li>
+						</ul>
+						<div>
+							<textarea id="content2" placeholder="留下你的評論吧!"></textarea>
+							<input value="提交" type="button" id="btn2" /> 留言區：
+							<div id="display_area2" style="padding-top:10px"></div>
+							<script>
+								$(document).ready(function() {
+									$('#btn2').click(function() {
+										var content_val2 = document.getElementById("content2").value;
+										$('#display_area2').append("訪客留言:" + content_val2 + "<br>");
+										clearContents();
+									});
+
+									function clearContents() {
+										document.getElementById('content2').value = "";
+									}
+								});
+							</script>
+						</div>
+					</div>
+				</div>
+				<!-- menu-two -->
+				<!-- menu-three -->
+				<div class="image fit">
+					<img id="pic003" src="images/pic03.jpg" />
+					<h2 align="center" style="margin-top:5px;margin-bottom:5px;">香菇雞湯</h2>
+					<div id="page">
+						<div>
+							<p align="center"><a href="#popupCloseRight3" data-position-to='window' data-transition="slidedown" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="mae;margin-top: 0px;margin-bottom: 0px;" aria-haspopup="true" aria-owns="popupCloseRight"
+								 aria-expanded="false">我要學!</a></p>
+						</div>
+					</div>
+					<div data-role="popup" id="popupCloseRight3" class="ui-content" style="width:650px;">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+						<img src="images/pic03.jpg" />
+						<ul class="foodul">
+							<li class="foodli" style="float:none;background-color: #87CEEB;font-size:24px;width:80px;">食材:</li>
+							<li class="foodli">1.土雞腿肉</li>
+							<li class="foodli">2.乾香菇適量</li>
+							<li class="foodli">3.薑片、鹽、蔥花少許</li>
+						</ul>
+						<ul class="foodul" style="clear: both;font-size:24px;">
+							<li class="foodli" style="float:none;background-color: #D8BFD8;width:80px;font-size:24px;">步驟:</li>
+							<li class="foodli" style="clear: both;">1.香菇泡水</li>
+							<li class="foodli" style="clear: both;">2.雞肉用悶燒罐去血水</li>
+							<li class="foodli" style="clear: both;">3.快煮鍋加水，加入薑片、雞肉，煮至沸騰</li>
+							<li class="foodli" style="clear: both;">4.最後加入香菇、蔥花、鹽巴調味，煮滾即可上桌。</li>
+						</ul>
+						<div>
+							<textarea id="content3" placeholder="留下你的評論吧!"></textarea>
+							<input value="提交" type="button" id="btn3" /> 留言區：
+							<div id="display_area3" style="padding-top:10px"></div>
+							<script>
+								$(document).ready(function() {
+									$('#btn3').click(function() {
+										var content_val3 = document.getElementById("content3").value;
+										$('#display_area3').append("訪客留言:" + content_val3 + "<br>");
+										clearContents();
+									});
+
+									function clearContents() {
+										document.getElementById('content3').value = "";
+									}
+								});
+							</script>
+						</div>
+					</div>
+				</div>
+				<!--menu-three-->
+			</div>
+		</div>
+	</section>
+
+	<!--link-->
+	<div style="background-color: #f2f2f2;">
+		<div id="linkpage" class="b1 block" style="text-align:center;width:500px;padding-bottom: 30px;padding-top: 30px;margin:0 auto;background-color: #ffffff;">
+			<span style="width:100px;"><做菜文章></apan></br>
+		<a href="https://blog.icook.tw/posts/118492">怎麼烹調都好吃！一次學會花椰菜的 5 種煮法</a></br>
+		<a href="https://blog.icook.tw/posts/118500">豆腐料理總是沒入味？主婦愛用的小技巧要學會！</a></br>
+		<a href="https://blog.icook.tw/posts/118355">無鹽、有鹽奶油差在哪？認識烘焙常用的 5 種奶油</a>
+	    </div>
+	</div>
+	<!--/link-->
+
+	<!-- Footer -->
+		<footer id="footer" style="height:200px;">
+			<a href="//icook.tw/?ref=nav">逛食譜</a>
+			<a href="//blog.icook.tw/?ref=nav">愛料理生活誌</a>
+			<a href="//tv.icook.tw/?ref=nav">愛料理影音</a>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+</body>
+
+</html>

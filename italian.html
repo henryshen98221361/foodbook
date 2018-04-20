@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>學而食習之</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<style id="popup-arrow-css">
+		.clickable-area {
+			display: block;
+			width: 100%;
+			height: 300px;
+			background-color: #ffefef;
+		}
+
+		.clickable-area:focus {
+			outline: 0;
+		}
+	</style>
+	<style id="tooltip-btn">
+		.ui-btn.my-tooltip-btn,
+		.ui-btn.my-tooltip-btn:hover,
+		.ui-btn.my-tooltip-btn:active {
+			background: none;
+			border: 0;
+		}
+
+		ul.foodul {
+			list-style-type: none;
+			font-size: 16px;
+			font-weight: 700;
+			margin: .5em 0;
+			font-family: sans-serif;
+			padding: 5px;
+			padding-left: 0px;
+		}
+
+		li.foodli {
+			float: left;
+			border: 2px #ccc solid;
+			padding: 5px;
+			border-radius: 10px;
+			background-color: #eee;
+			font-size: 16px;
+			font-weight: 700;
+			margin-top: .3em;
+			margin-bottom: .5em;
+			margin-right: .5em;
+			font-family: sans-serif;
+		}
+	</style>
+	<style>
+		.transition {
+			-webkit-transform: scale(1.02);
+			-moz-transform: scale(1.02);
+			-o-transform: scale(1.02);
+			transform: scale(1.02);
+		}
+
+		#pic001 {
+			-webkit-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+		}
+
+		#pic007 {
+			-webkit-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+		}
+	</style>
+	<style>
+		.block {
+			border: 1px solid gray;
+			top: 0px;
+			font-weight: bold;
+			padding: 6px;
+			text-align: center;
+		}
+
+		.b1 {
+			display: none;
+			background-color: gray;
+			text-align: center;
+		}
+
+		@media only screen and (min-width:1000px) {
+			.b1 {
+				display: block;
+			}
+		}
+
+		.chinese {
+			width: 206px;
+			height: 90px;
+			display: block;
+			position: absolute;
+			left: 10%;
+			border-radius: 10px;
+			background-image: url('images/chineseb.jpg');
+		}
+
+		.chinese:hover {
+			background-image: url('images/chinese.jpg');
+		}
+
+		.japanese {
+			width: 206px;
+			height: 90px;
+			display: block;
+			position: absolute;
+			left: 32%;
+			border-radius: 10px;
+			background-image: url('images/japaneseb.jpg');
+		}
+
+		.japanese:hover {
+			background-image: url('images/japanese.jpg');
+		}
+
+		.italian {
+			width: 206px;
+			height: 90px;
+			display: block;
+			position: absolute;
+			left: 55%;
+			border-radius: 10px;
+			background-image: url('images/italianb.jpg');
+		}
+
+		.italian:hover {
+			background-image: url('images/italian.jpg');
+		}
+
+		.cafe {
+			width: 206px;
+			height: 90px;
+			display: block;
+			position: absolute;
+			right: 10%;
+			border-radius: 10px;
+			background-image: url('images/cafeb.jpg');
+		}
+
+		.cafe:hover {
+			background-image: url('images/cafe.jpg');
+		}
+
+		.b2 {
+			display: none;
+		}
+
+		@media only screen and (min-width:1300px) {
+			.b2 {
+				display: block;
+			}
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+			$('#pic001').hover(function() {
+				$("#pic001").addClass('transition');
+
+			}, function() {
+				$("#pic001").removeClass('transition');
+			});
+		});
+		$(document).ready(function() {
+			$('#pic007').hover(function() {
+				$("#pic007").addClass('transition');
+
+			}, function() {
+				$("#pic007").removeClass('transition');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- Header -->
+	<header id="header" class="alt">
+		<div class="logo"><a href="homework.html"></a></div>
+		<a href="#menu">目錄</a>
+	</header>
+
+	<!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a href="./index.html">回首頁</a></li>
+			<li><a href="./chinese.html">中式料理</a></li>
+			<li><a href="./japanese.html">日式料理</a></li>
+			<li><a href="./italian.html">義式料理</a></li>
+			<li><a href="./cafe.html">甜點</a></li>
+		</ul>
+	</nav>
+	<!-- Banner -->
+	<section class="banner full">
+		<article>
+			<img src="images/slide01.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享。動手做</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="images/slide02.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享。動手做</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="images/slide03.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享。動手做</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="images/slide04.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享。動手做</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="images/slide05.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>學而食習之</h2>
+					<p>美食。分享</p>
+				</header>
+			</div>
+		</article>
+	</section>
+	<!-- body-content -->
+	<section id="three" class="wrapper style2">
+		<div class="inner">
+			<div class="b2" id="b2" style="text-align: justify;">
+				<div>
+					<a href="./chinese.html" data-ajax="false" class="chinese">
+					</a>
+				</div>
+				<div>
+					<a href="./japanese.html" data-ajax="false" class="japanese">
+					</a>
+				</div>
+				<div>
+					<a href="./italian.html" data-ajax="false" class="italian">
+					</a>
+				</div>
+				<div>
+					<a href="./cafe.html" data-ajax="false" class="cafe">
+					</a>
+				</div>
+			</div>
+			<p style="padding-top:120px;" align="right">當前頁面:義式料理&nbsp;&nbsp;<a href="./index.html" data-ajax="false">回首頁</a></p>
+			<div class="gallery">
+				<!-- menu-one -->
+				<div class="image fit">
+					<img id="pic001" src="images/pic01.jpg" />
+					<h2 align="center" style="margin-top:5px;margin-bottom:5px;">茄汁蘑菇義大利麵</h2>
+					<div id="page">
+						<div>
+							<p align="center"><a href="#popupCloseRight1" data-position-to='window' data-transition="slidedown" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="mae;margin-top: 0px;margin-bottom: 0px;" aria-haspopup="true" aria-owns="popupCloseRight"
+								 aria-expanded="false">我要學!</a></p>
+						</div>
+					</div>
+					<div data-role="popup" id="popupCloseRight1" class="ui-content" style="width:650px;">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+						<img src="images/pic01.jpg" />
+						<ul class="foodul">
+							<li class="foodli" style="float:none;background-color: #87CEEB;font-size:24px;width:80px;">食材:</li>
+							<li class="foodli">1.義大利麵</li>
+							<li class="foodli">2.洋蔥一顆</li>
+							<li class="foodli">3.洋菇一盒</li>
+							<li class="foodli">4.蒜頭三顆</li>
+							<li class="foodli">5.黑胡椒一小匙</li>
+							<li class="foodli">6.鹽、紅醬、起司粉少許</li>
+						</ul>
+						<ul class="foodul" style="clear: both;font-size:24px;">
+							<li class="foodli" style="float:none;background-color: #D8BFD8;width:80px;font-size:24px;">步驟:</li>
+							<li class="foodli" style="clear: both;">1.義大利麵放入滾水，煮至約8分軟取出</li>
+							<li class="foodli" style="clear: both;">2.鍋裡放一匙油，放入洋蔥，洋菇拌炒至金黃色，取出備用</li>
+							<li class="foodli" style="clear: both;">3.鍋裡放一匙油，把蒜片跟紅醬拌炒出香氣</li>
+							<li class="foodli" style="clear: both;">4.將洋蔥、洋菇、加入鍋裡混合，混合拌炒均勻，加入黑胡椒，鹽調味</li>
+							<li class="foodli" style="clear: both;">5.把麵條放入醬中拌炒均勻，撒上起司粉，就可以享用美味餐點囉！</li>
+						</ul>
+						<div>
+							<textarea id="content1" placeholder="留下你的評論吧!"></textarea>
+							<input value="提交" type="button" id="btn1" /> 留言區：
+							<div id="display_area1" style="padding-top:10px"></div>
+							<script>
+								$(document).ready(function() {
+									$('#btn1').click(function() {
+										var content_val1 = document.getElementById("content1").value;
+										$('#display_area1').append("訪客留言:" + content_val1 + "<br>");
+										clearContents();
+									});
+
+									function clearContents() {
+										document.getElementById('content1').value = "";
+									}
+								});
+							</script>
+						</div>
+					</div>
+				</div>
+				<!-- /menu-one -->
+				<!--menu-seven-->
+				<div class="image fit">
+					<img id="pic007" src="images/pic07.jpg" />
+					<h2 align="center" style="margin-top:5px;margin-bottom:5px;">牛肉蔬菜湯</h2>
+					<div id="page">
+						<div>
+							<p align="center"><a href="#popupCloseRight7" data-position-to='window' data-transition="slidedown" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" style="mae;margin-top: 0px;margin-bottom: 0px;" aria-haspopup="true" aria-owns="popupCloseRight"
+								 aria-expanded="false">我要學!</a></p>
+						</div>
+					</div>
+					<div data-role="popup" id="popupCloseRight7" class="ui-content" style="max-width:650px;min-width:650px;">
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+						<img src="images/pic07.jpg" />
+						<ul class="foodul">
+							<li class="foodli" style="float:none;background-color: #87CEEB;font-size:24px;width:80px;">食材:</li>
+							<li class="foodli">1.牛肉300-400g</li>
+							<li class="foodli">2.高麗菜半顆</li>
+							<li class="foodli">3.紅蘿蔔1條</li>
+							<li class="foodli">4.鮮香菇2片</li>
+							<li class="foodli">5.馬鈴薯1顆</li>
+							<li class="foodli">6.芹菜2-3支</li>
+							<li class="foodli">7.蒜頭、洋蔥少許</li>
+						</ul>
+						<ul class="foodul" style="clear: both;font-size:24px;">
+							<li class="foodli" style="float:none;background-color: #D8BFD8;width:80px;font-size:24px;">步驟:</li>
+							<li class="foodli" style="clear: both;">1.洋蔥、紅蘿蔔、高麗菜切好備用。</li>
+							<li class="foodli" style="clear: both;">2.牛肉切塊，加熱至無血水</li>
+							<li class="foodli" style="clear: both;">3.起油鍋，爆香蒜末後接著下洋蔥片、鮮香菇片、紅蘿蔔塊炒香</li>
+							<li class="foodli" style="clear: both;">4.加入高麗菜片與燙過的牛肉塊、番茄塊</li>
+							<li class="foodli" style="clear: both;">5.以黑胡椒調味並加水大火煮滾後加入番茄泥轉小火燜煮90分鐘</li>
+							<li class="foodli" style="clear: both;">6.起鍋前再加入馬鈴薯塊煮5～8分鐘，即可完成</li>
+						</ul>
+						<div>
+							<textarea id="content7" placeholder="留下你的評論吧!"></textarea>
+							<input value="提交" type="button" id="btn7" /> 留言區：
+							<div id="display_area7" style="padding-top:10px"></div>
+							<script>
+								$(document).ready(function() {
+									$('#btn7').click(function() {
+										var content_val7 = document.getElementById("content7").value;
+										$('#display_area7').append("訪客留言:" + content_val7 + "<br>");
+										clearContents();
+									});
+
+									function clearContents() {
+										document.getElementById('content7').value = "";
+									}
+								});
+							</script>
+						</div>
+						</br>
+					</div>
+				</div>
+				<!--/menu-seven-->
+			</div>
+		</div>
+	</section>
+
+	<!--link-->
+	<div style="background-color: #f2f2f2;">
+		<div id="linkpage" class="b1 block" style="text-align:center;width:500px;padding-bottom: 30px;padding-top: 30px;margin:0 auto;background-color: #ffffff;">
+			<span style="width:100px;"><做菜文章></apan></br>
+		<a href="https://blog.icook.tw/posts/118492">怎麼烹調都好吃！一次學會花椰菜的 5 種煮法</a></br>
+		<a href="https://blog.icook.tw/posts/118500">豆腐料理總是沒入味？主婦愛用的小技巧要學會！</a></br>
+		<a href="https://blog.icook.tw/posts/118355">無鹽、有鹽奶油差在哪？認識烘焙常用的 5 種奶油</a>
+	    </div>
+	</div>
+	<!--/link-->
+
+	<!-- Footer -->
+		<footer id="footer" style="height:200px;">
+			<a href="//icook.tw/?ref=nav">逛食譜</a>
+			<a href="//blog.icook.tw/?ref=nav">愛料理生活誌</a>
+			<a href="//tv.icook.tw/?ref=nav">愛料理影音</a>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+</body>
+
+</html>
